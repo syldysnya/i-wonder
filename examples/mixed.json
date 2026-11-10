@@ -1,0 +1,45 @@
+[
+  {
+    "container_name": "weather-script",
+    "privileged": false,
+    "run_as_root": false,
+    "read_only_root_filesystem": true,
+    "network_enabled": true,
+    "egress_allowlist": ["api.weather.com"],
+    "mounts": []
+  },
+  {
+    "container_name": "writable-fs-script",
+    "privileged": false,
+    "run_as_root": false,
+    "read_only_root_filesystem": false,
+    "network_enabled": false,
+    "mounts": []
+  },
+  {
+    "container_name": "read-only-socket",
+    "privileged": false,
+    "run_as_root": false,
+    "read_only_root_filesystem": true,
+    "network_enabled": false,
+    "mounts": ["/var/run/docker.sock:/sock:ro"]
+  },
+  {
+    "container_name": "quoted-and-missing",
+    "privileged": "false",
+    "read_only_root_filesystem": true,
+    "network_enabled": true,
+    "egress_allowlist": [],
+    "mounts": []
+  },
+  {
+    "container_name": "metadata-allowlisted",
+    "privileged": false,
+    "run_as_root": false,
+    "read_only_root_filesystem": true,
+    "network_enabled": true,
+    "egress_allowlist": ["api.weather.com", "169.254.169.254"],
+    "mounts": []
+  },
+  42
+]

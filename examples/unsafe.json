@@ -1,0 +1,8 @@
+{
+  "container_name": "customer-script-01",
+  "privileged": true,
+  "run_as_root": true,
+  "read_only_root_filesystem": false,
+  "network_enabled": true,
+  "mounts": ["/var/run/docker.sock"]
+}

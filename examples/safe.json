@@ -1,0 +1,8 @@
+{
+  "container_name": "safe-script",
+  "privileged": false,
+  "run_as_root": false,
+  "read_only_root_filesystem": true,
+  "network_enabled": false,
+  "mounts": ["/data/input"]
+}
